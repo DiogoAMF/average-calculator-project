@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link para importar a fonte Roboto do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link para importar o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Calculadora de média</title>
+  </head>
+
+  <body>
+    <!-- Contêiner principal -->
+    <div class="container">
+      <!-- Cabeçalho -->
+      <header>
+        <!-- Logo da calculadora -->
+        <img src="./image/logo.png" alt="chapel e diploma" />
+        <!-- Título da página -->
+        <h1>Calculadora de média</h1>
+      </header>
+
+      <!-- Formulário para adicionar atividades e notas -->
+      <form id="form-atividade">
+        <!-- Campo de entrada para o nome da atividade -->
+        <input
+          type="text"
+          id="nome-atividade"
+          required
+          placeholder="Nome da atividade"
+        />
+        <!-- Campo de entrada para a nota da atividade -->
+        <input type="number" id="nota-atividade" min="0" max="10" />
+        <!-- Botão para adicionar uma nova atividade -->
+        <button type="submit">Adicionar +</button>
+      </form>
+
+      <!-- Tabela para exibir as atividades e resultados -->
+      <table>
+        <!-- Cabeçalho da tabela -->
+        <thead>
+          <tr>
+            <!-- Coluna para o nome da atividade -->
+            <th>Nome da atividade</th>
+            <!-- Coluna para a nota da atividade -->
+            <th>Nota</th>
+            <!-- Coluna para indicar se a atividade foi aprovada ou reprovada -->
+            <th>Aprovado?</th>
+          </tr>
+        </thead>
+        <!-- Corpo da tabela -->
+        <tbody>
+          <!-- As linhas da tabela serão preenchidas dinamicamente pelo JavaScript -->
+        </tbody>
+        <!-- Rodapé da tabela -->
+        <tfoot>
+          <tr>
+            <!-- Célula para exibir a média final -->
+            <td>Média final</td>
+            <!-- Célula para exibir o valor da média final -->
+            <td id="media-final-valor">---</td>
+            <!-- Célula para indicar se o aluno foi aprovado ou reprovado -->
+            <td id="media-final-resultado">---</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Script JavaScript para lidar com a lógica da calculadora -->
+    <script src="./main.js"></script>
+    <!---->
+  </body>
+</html>
