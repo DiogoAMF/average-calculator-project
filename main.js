@@ -62,8 +62,9 @@ function atualizaMediaFinal() {
   // Calculando a média final das notas
   const mediaFinal = calculaMediaFinal();
 
-  // Atualizando o valor da média final na página HTML
-  document.getElementById("media-final-valor").innerHTML = mediaFinal;
+  // Atualizando o valor da média final na página HTML e limitando o numero de casas decimais
+  document.getElementById("media-final-valor").innerHTML =
+    mediaFinal.toFixed(2);
 
   // Determinando se o aluno foi aprovado ou reprovado e atualizando o resultado na página HTML
   document.getElementById("media-final-resultado").innerHTML =
